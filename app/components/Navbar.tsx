@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, MouseEvent } from 'react';
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { MdOutlinePersonAddAlt } from "react-icons/md";
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
@@ -7,16 +7,16 @@ import { FaRegBell } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineSearch, AiOutlineCloseCircle } from "react-icons/ai"; 
 
-const Navbar = () => {
-  const [searchVisible, setSearchVisible] = useState(false);
-  const [searchValue, setSearchValue] = useState('');
+const Navbar: React.FC = () => {
+  const [searchVisible, setSearchVisible] = useState<boolean>(false);
+  const [searchValue, setSearchValue] = useState<string>('');
 
   const handleSearchToggle = () => {
     setSearchVisible(!searchVisible);
     setSearchValue('');
   };
 
-  const handleSearchChange = (e:any) => {
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
   };
 
