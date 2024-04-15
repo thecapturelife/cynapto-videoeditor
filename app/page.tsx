@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <h1 className="flex justify items-start h-full w-full" style={{ fontSize: "30px", marginTop: "3rem", marginLeft: "3rem" }}>
-        Let's create some&nbsp;<span className="font-bold">Videos</span>!
+        Lets create some&nbsp;<span className="font-bold">Videos</span>!
       </h1>
       <Createproject />
       <div style={{ marginLeft: '70rem', display: 'flex', alignItems: 'center', marginTop : "3rem"}}> 
